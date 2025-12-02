@@ -1,11 +1,3 @@
-"""
-Train the diffusion UNet on Flickr30k captions + images,
-using pretrained CLIP and VAE weights from your existing repo.
-
-Save this as: train_flickr30k_unet.py
-Run in Colab inside your repo folder.
-"""
-
 import os
 import math
 import random
@@ -20,7 +12,7 @@ from datasets import load_dataset
 from transformers import CLIPTokenizer
 from tqdm import tqdm
 
-import model_loader  # from your repo
+import model_loader 
 
 # -----------------------------
 # Config
@@ -355,3 +347,4 @@ def train_unet_on_flickr30k(cfg: TrainConfig):
 if __name__ == "__main__":
     cfg = TrainConfig()
     train_unet_on_flickr30k(cfg)
+
